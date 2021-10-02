@@ -2,57 +2,81 @@
   <head>
 
     <style>
-    h1 {
-      font-family: 'Open Sans', sans-serif;
-      font-size: 25px;
-      font-weight: 500;
-      text-rendering: optimizeLegibility;
-    }
-    h2 {
-      font-family: 'Open Sans', sans-serif;
-      letter-spacing: 1px;
-      letter-spacing: -0.015em;
-      font-weight: 300;
-      text-rendering: optimizeLegibility;
-    }
-    body {
-        font-family: 'Open Sans', sans-serif;
-        font: normal 12px/150% Arial, Helvetica, sans-serif;
-        background: #fff;
-    }
-    table, td {
-        border: 1px solid black;
-        border-collapse: collapse;
-        padding: 2px 2px;
-        text-align: center;
-    }
-    th {
-        padding: 3px 10px;
-        font-family: 'Open Sans', sans-serif;
-        font-weight: 100;
-        background-color:#DADADA;
-        color:#000000;
-        font-size: 15px;
-        border-left: 1px solid black;
-        height: 30px;
-    }
-    table tr {
-        color: #000000;
-        border: 1px solid black;
-        font-size: 12px;
-        font-weight: normal;
-        height: 40px;
-    }
-    audio {
-      width: 120px;
-      padding: 1px;
-    }
-    div {
-      font-family: 'Open Sans', sans-serif;
-      font-weight: 100;
-      font-size: 15px;
-      line-height: 24px;
-    }
+   <style>
+        h1 {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 24px;
+            line-height: 250%;
+            font-weight: 500;
+            text-rendering: optimizeLegibility;
+        }
+
+        h2 {
+            font-size: 18px;
+            font-family: 'Open Sans', sans-serif;
+            letter-spacing: 1px;
+            font-weight: 300;
+            line-height: 120%;
+            text-rendering: optimizeLegibility;
+        }
+
+        body {
+            font: normal 12px/150% Arial, Helvetica, sans-serif;
+            background: #fff;
+        }
+
+        table {
+            width: 95%;
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 1px solid black;
+            border-collapse: inherit;
+            padding: 2px 2px;
+            text-align: center;
+            word-wrap: break-word;
+            width: 8%;
+        }
+
+        th {
+            padding: 3px 10px;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 100;
+            color: #000000;
+            font-size: 15px;
+            border-left: 1px solid black;
+            height: 30px;
+        }
+
+        table tr {
+            color: #000000;
+            border: 1px solid black;
+            font-size: 12px;
+            font-weight: normal;
+            height: 40px;
+        }
+
+        audio {
+            width: 240px;
+            padding-bottom: 1px;
+            padding-top: 4px;
+        }
+
+        div {
+            font-family: 'Century', sans-serif;
+            font-weight: 100;
+            font-size: 14px;
+            line-height: 24px;
+        }
+
+        .sample {
+            font-size: 15px;
+            font-style: italic;
+            border: 1px solid #ddd;
+            padding: 3px;
+            margin-bottom: 2px;
+        }
     </style>
 
     <meta charset="UTF-8">
@@ -68,26 +92,29 @@
     <!-- <br> -->
     <!-- <div style="font-size: 20px;"><b>Paper:</b> <a href="https://arxiv.org/">arXiv</a> </div> -->
     <br>
-    <div style="font-size: 20px;"><b>Authors:</b> Dawei Liu, Longbiao Wang, Sheng Li, Haoyu Li, Chenchen Ding, Ju Zhang and Jianwu Dang</div>
+    <div style="font-size: 20px;"><b>Authors:</b>Kaili,Zhang<sup>&dagger;</sup>, Cheng Gong<sup>&dagger;</sup></div>
     <br>
-    <div style="font-size: 20px; width: 1200px;"><b>Abstract:</b> The quality of multispeaker text-to-speech (TTS) is composed of speech naturalness and speaker similarity. The current multispeaker TTS based on speaker embeddings extracted by speaker verification (SV) or speaker recognition (SR) models has made significant progress in speaker similarity of synthesized speech. SV/SR tasks build the speaker space based on the differences between speakers in the training set and thus extract speaker embeddings that can improve speaker similarity; however, they deteriorate the naturalness of synthetic speech since such embeddings lost speech dynamics to some extent. Unlike SV/SR-based systems, the ASR encoder outputs contain relatively complete speech information, such as speaker information, timbre, and prosody. Therefore, we propose an ASR-based synthesis framework to extract speech embeddings using an ASR encoder to improve multispeaker TTS quality, especially for speech naturalness. To enable the ASR system to learn the speaker characteristics better, we explicitly feed the speaker-id to the training label. The experimental results show that the speech embeddings extracted by the proposed method have good speaker characteristics and beneficial acoustic information for speech naturalness. The proposed method significantly improves the naturalness and similarity of multispeaker TTS.</div>
-
-    <br>
-    <br>
-
-    <br>
-    <br>
-    <div><h2>Multi-Speaker TTS: the audios synthesized by multi-speaker TTS.</div>
-
-    <br>
+     <div style="font-size: 18px; width: auto">
+    <span style="font-weight: bold">Abstract: </span>
+    Style  modelling  is  an  important  issue  in  expressive  neuraltext-to-speech. Specifically, the style vector is extracted fromthe style encoder,
+       the text vector is extracted from the text en-coder, and then style vector concatenated with text encoder asthe input of the decoder to synthesize the
+       audio of the desiredstyle. However, the style vector extracted by the style encoderwill entangle some content information, and it will cause con-flicts with the real 
+       input content, which will have a negativeimpact on the synthesized audio.  In this work, we added theASR task, and did not let the task of ASR learn well, in order to remove 
+       the content information before the style vectoris extracted by the style encoder.   We use objective evalua-tion word error rate (WER) to prove that our method can efectively 
+       alleviate the problem of entangle between style andcontent information. The subjective evaluation of ABX alsoshows that our method can also maintain a better style transferability.
+   </div>
     <br>
     
-
+    <div>
+     <h3>Definition (same as defined in  our submitted paper)</h3>
+     <strong>Ground Truth</strong>: Audios selected from Blizzard Challenge 2013 testset.<br> 
+     <strong> baseline modified Tacotron model</strong>: It is our pre-trained TTS model, which is an extension on the tacotron model by adding a reference encoder and a share layer.<br> 
+     <strong>baseline ASR_guide</strong> Introducing the ASR model, and fine-tune the TTS model under the guidance of the ASR model.<br>
+     <strong>Our proposed</strong> We add the pre-trained ASR model to the pre-trained modified tacotron model, and then continue to train the joint modified tacotron model, and keep the parameters of the ASR model fixed during the training process
     <br>
-    <br>
-    <br>
-
-    <div style="font-size: 16px">© 2021 TJU. All rights reserved.</div>
+     <p class="sample">
+    1.This is not the first time, nor the second, but it shall be the last.
+    </p>
 
   </body>
 </html>

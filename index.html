@@ -107,14 +107,125 @@
      <h3>Definition (same as defined in  our submitted paper)</h3>
       <div>
      <strong>Ground Truth</strong>: Audios selected from Blizzard Challenge 2013 testset.<br> 
-     <strong> baseline modified Tacotron model</strong>: It is our pre-trained TTS model, which is an extension on the tacotron model by adding a reference encoder and a share layer.<br> 
-     <strong>baseline ASR_guide</strong> Introducing the ASR model, and fine-tune the TTS model under the guidance of the ASR model.<br>
+     <strong> Baseline Modified Tacotron Model</strong>: It is our pre-trained TTS model, which is an extension on the tacotron model by adding a reference encoder and a share layer.<br> 
+     <strong>Baseline ASR_guide</strong> Introducing the ASR model, and fine-tune the TTS model under the guidance of the ASR model.<br>
      <strong>Our proposed</strong> We add the pre-trained ASR model to the pre-trained modified tacotron model, and then continue to train the joint modified tacotron model, and keep the parameters of the ASR model fixed during the training process
     </div>
         <br>
-     <p class="sample">
-    1.This is not the first time, nor the second, but it shall be the last.
-    </p>
+    <h2> <b> Parallel style transfer </b></h2>
+    <br>
+   <h3>Target Text1 : </h3>
+   <br>
+<table style="table-layout: auto">
+        <tr>
+            <td>Ground Truth & Reference Audio</td>
+            <td>Baseline Modified Tacotron Model</td>
+            <td>Baseline ASR_guide</td>
+            <td>Our proposed</td>
+        </tr>
+        <tr>
+            <td rowspan=2>
+                <audio src="sentence2/CA-MP3-15-095.wav" controls preload="metadata"></audio>
+            </td>
+            <td rowspan=2>
+                <audio src="sentence2/origin-eval-188000_CA-MP3-15-095_ref-mel.wav" controls preload="metadata"></audio>
+            </td>
+            <td rowspan=2>
+                <audio src="sentence2/batch-eval-188000_CA-MP3-15-095_ref-self.wav" controls preload="metadata"></audio>
+            </td>
+            <td rowspan=2>
+                <audio src="sentence2/instance-eval-188000_CA-MP3-15-095_ref-self.wav" controls
+                       preload="metadata"></audio>
+            </td>
+        </tr>
+    </table>
+    <br>
 
+
+   <h3>Target Text 2 : </h3>
+   <br>
+<table style="table-layout: auto">
+        <tr>
+            <td>Ground Truth & Reference Audio</td>
+            <td>Baseline Modified Tacotron Model</td>
+            <td>Baseline ASR_guide</td>
+            <td>Our proposed</td>
+        </tr>
+        <tr>
+            <td rowspan=2>
+                <audio src="sentence2/CA-MP3-15-095.wav" controls preload="metadata"></audio>
+            </td>
+            <td rowspan=2>
+                <audio src="sentence2/origin-eval-188000_CA-MP3-15-095_ref-mel.wav" controls preload="metadata"></audio>
+            </td>
+            <td rowspan=2>
+                <audio src="sentence2/batch-eval-188000_CA-MP3-15-095_ref-self.wav" controls preload="metadata"></audio>
+            </td>
+            <td rowspan=2>
+                <audio src="sentence2/instance-eval-188000_CA-MP3-15-095_ref-self.wav" controls
+                       preload="metadata"></audio>
+            </td>
+        </tr>
+    </table>
+    <br>
+
+    <h2> <b> Non-Parallel style transfer </b></h2>
+    <br>
+  <h3>Reference Audio Content 1 : </h3>
+  <br>
+   <h3> Target Text 1 : </h3>
+    <table style="table-layout: auto">
+        <tr>
+            <td>Ground Truth & Reference Audio</td>
+            <td>Baseline Modified Tacotron Model</td>
+            <td>Baseline ASR_guide</td>
+            <td>Our proposed</td>
+        </tr>
+        <tr>
+            <td rowspan=2>
+                <audio src="sentence2/CA-MP3-15-095.wav" controls preload="metadata"></audio>
+            </td>
+            <td rowspan=2>
+                <audio src="sentence2/origin-eval-188000_CA-MP3-15-095_ref-mel.wav" controls preload="metadata"></audio>
+            </td>
+            <td rowspan=2>
+                <audio src="sentence2/batch-eval-188000_CA-MP3-15-095_ref-self.wav" controls preload="metadata"></audio>
+            </td>
+            <td rowspan=2>
+                <audio src="sentence2/instance-eval-188000_CA-MP3-15-095_ref-self.wav" controls
+                       preload="metadata"></audio>
+            </td>
+        </tr>
+    </table>
+    <br>
+
+<h3>Reference Audio Content 2 : </h3>
+  <br>
+   <h3> Target Text 2 : </h3>
+    <table style="table-layout: auto">
+        <tr>
+            <td>Ground Truth & Reference Audio</td>
+            <td>Baseline Modified Tacotron Model</td>
+            <td>Baseline ASR_guide</td>
+            <td>Our proposed</td>
+        </tr>
+        <tr>
+            <td rowspan=2>
+                <audio src="sentence2/CA-MP3-15-095.wav" controls preload="metadata"></audio>
+            </td>
+            <td rowspan=2>
+                <audio src="sentence2/origin-eval-188000_CA-MP3-15-095_ref-mel.wav" controls preload="metadata"></audio>
+            </td>
+            <td rowspan=2>
+                <audio src="sentence2/batch-eval-188000_CA-MP3-15-095_ref-self.wav" controls preload="metadata"></audio>
+            </td>
+            <td rowspan=2>
+                <audio src="sentence2/instance-eval-188000_CA-MP3-15-095_ref-self.wav" controls
+                       preload="metadata"></audio>
+            </td>
+        </tr>
+    </table>
+<br>
+    <br>
   </body>
 </html>

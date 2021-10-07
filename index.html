@@ -81,13 +81,13 @@
     </style>
 
     <meta charset="UTF-8">
-    <title>Exploring Effective Speech Representation via ASR for High-Quality End-to-End Multispeaker TTS</title>
+    <title>JOINT AND ADVERSARIAL TRAINING WITH ASR FOR EXPRESSIVE SPEECH SYNTHESIS</title>
   </head>
 
   <body>
     <article>
       <header>
-        <h1><font style="line-height:1.5;">"Exploring Effective Speech Representation via ASR for High-Quality End-to-End Multispeaker TTS"</font></h1>
+        <h1><font style="line-height:1.5;">"JOINT AND ADVERSARIAL TRAINING WITH ASR FOR EXPRESSIVE SPEECH SYNTHESIS"</font></h1>
       </header>
     </article>
     <!-- <br> -->
@@ -95,12 +95,12 @@
     <br>
 
     <div style="font-size: 20px;"><b>Authors:</b>Kaili,Zhang<sup>&dagger;</sup>, Cheng Gong<sup>&dagger;</sup></div>
-    <div style="font-size: 20px; width: 1200px;"><b>Abstract:</b>Style  modelling  is  an  important  issue  in  expressive  neuraltext-to-speech. Specifically, the style vector is extracted fromthe style encoder,
-       the text vector is extracted from the text encoder, and then style vector concatenated with text encoder asthe input of the decoder to synthesize the
-       audio of the desiredstyle. However, the style vector extracted by the style encoderwill entangle some content information, and it will cause conflicts with the real 
-       input content, which will have a negativeimpact on the synthesized audio.  In this work, we added theASR task, and did not let the task of ASR learn well, in order to remove 
-       the content information before the style vectoris extracted by the style encoder.   We use objective evaluation word error rate (WER) to prove that our method can efectively 
-       alleviate the problem of entangle between style andcontent information. The subjective evaluation of ABX alsoshows that our method can also maintain a better style transferability.
+    <div style="font-size: 20px; width: 1200px;"><b>Abstract:</b>Style modeling is an important issue and has been proposed in expressive speech synthesis. 
+      In existing unsupervised methods, the style encoder extracts the latent representation from the reference audio as style information. However, the style information extracted from the style encoder will entangle some content information, 
+      which will cause conflicts with the real input content, and the synthesized speech will be influenced. 
+      In this study, we propose to alleviate the problem by integrating Text-To-Speech (TTS)  model and Automatic Speech Recognition (ASR) model with a share layer network for joint training,  and using ASR adversarial training to eliminate the content information in the  style information.
+      At the same time, we propose an adaptive adversarial weight learning strategy to prevent the model from collapsing. The objective evaluation using word error rate(WER) demonstrates that our method can effectively alleviate the entanglement between style and content information. 
+      Subjective evaluation indicates that the method improves the quality of synthesized speech and enhances the ability of style transfer compared with the baseline models.
    </div>
     <br>
     
@@ -108,9 +108,11 @@
      <h3>Definition (same as defined in  our submitted paper)</h3>
       <div>
      <strong>Ground Truth</strong>:Audios selected from Blizzard Challenge 2013 testset.<br> 
-     <strong> Baseline Modified Tacotron Model</strong>: It is our pre-trained TTS model, which is an extension on the tacotron model by adding a reference encoder and a share layer.<br> 
-     <strong>Baseline ASR_guide</strong> Introducing the ASR model, and fine-tune the TTS model under the guidance of the ASR model.
-     <strong>Our proposed</strong> We add the pre-trained ASR model to the pre-trained modified tacotron model, and then continue to train the joint modified tacotron model, and keep the parameters of the ASR model fixed during the training process.
+     <strong> Baseline Modified Tacotron Model</strong>:  It is the same as our pre-trained TTS model.<br> 
+     <strong>Baseline ASR_guide</strong> In the training process, the model makes the generated speech recognized well by the ASR, and the ASR task is used to continuously guide the TTS training to make the synthesized speech clearer
+     <strong>Our proposed</strong>We combine the pre-trained ASR model with the pre-trained TTS model. And we perform ASR adversarial training in order to make the reference audio not well recognized by the ASR, aiming to eliminate the content information in the style information. We also propose an
+            adaptive adversarial weight learning strategy to prevent
+            the model from collapsing
     </div>
      <br>
     <h2> <b> Parallel style transfer </b></h2>

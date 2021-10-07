@@ -94,7 +94,7 @@
     <!-- <div style="font-size: 20px;"><b>Paper:</b> <a href="https://arxiv.org/">arXiv</a> </div> -->
     <br>
 
-    <div style="font-size: 20px;"><b>Authors:</b>Kaili,Zhang<sup>&dagger;</sup>, Cheng Gong<sup>&dagger;</sup></div>
+    <div style="font-size: 20px;"><b>Authors:</b>Kaili,Zhang<sup>&dagger;</sup>, Cheng Gong<sup>&dagger;</sup>, Wenhuan Lu<sup>*</sup> Longbiao Wang<sup>*</sup>,Jianguo Wei, Dawei Liu</div>
     <div style="font-size: 20px; width: 1200px;"><b>Abstract:</b>Style modeling is an important issue and has been proposed in expressive speech synthesis. 
       In existing unsupervised methods, the style encoder extracts the latent representation from the reference audio as style information. However, the style information extracted from the style encoder will entangle some content information, 
       which will cause conflicts with the real input content, and the synthesized speech will be influenced. 
@@ -109,7 +109,7 @@
       <div>
      <strong>Ground Truth</strong>:Audios selected from Blizzard Challenge 2013 testset.<br> 
      <strong> Baseline Modified Tacotron Model</strong>:  It is the same as our pre-trained TTS model.<br> 
-     <strong>Baseline ASR_guide</strong> In the training process, the model makes the generated speech recognized well by the ASR, and the ASR task is used to continuously guide the TTS training to make the synthesized speech clearer
+     <strong>Baseline ASR_guide</strong> In the training process, the model makes the generated speech recognized well by the ASR, and the ASR task is used to continuously guide the TTS training to make the synthesized speech clearer<br>
      <strong>Our proposed</strong>We combine the pre-trained ASR model with the pre-trained TTS model. And we perform ASR adversarial training in order to make the reference audio not well recognized by the ASR, aiming to eliminate the content information in the style information. We also propose an
             adaptive adversarial weight learning strategy to prevent
             the model from collapsing
